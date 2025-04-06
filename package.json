@@ -17,6 +17,7 @@
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "dev": "npx nodemon",
+    "test": "echo \"test\"",
     "lint": "npx eslint",
     "seed": "npx ts-node ./src/util/dataSeeder.ts",
     "fakeSeed": "npx ts-node ./src/util/fakeSeeder.ts"
