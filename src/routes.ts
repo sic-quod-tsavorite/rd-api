@@ -12,6 +12,7 @@ import {
   registerUser,
   verifyToken,
 } from "./controllers/authController";
+import { startCron } from "./controllers/devToolsController";
 
 const router: Router = Router();
 
@@ -30,6 +31,9 @@ const router: Router = Router();
 router.get("/", (req: Request, res: Response) => {
   res.status(200).send("Welcome to the RD-API");
 });
+
+// Dev tool
+router.get("/start-cron", startCron);
 
 // Auth routes
 /**
