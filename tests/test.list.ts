@@ -5,7 +5,7 @@ import health from "./health.test";
 import userTestCollection from "./user.test";
 
 import { userModel } from "../src/models/userModel";
-import { productModel } from "../src/models/productModel";
+import { duckModel } from "../src/models/duckModel";
 
 import dotenvFlow from "dotenv-flow";
 import { connect, disconnect } from "../src/repository/database";
@@ -18,7 +18,7 @@ function setup() {
     try {
       await connect();
       await userModel.deleteMany({});
-      await productModel.deleteMany({});
+      await duckModel.deleteMany({});
     } finally {
       await disconnect();
     }
@@ -28,7 +28,7 @@ function setup() {
     try {
       await connect();
       await userModel.deleteMany({});
-      await productModel.deleteMany({});
+      await duckModel.deleteMany({});
     } finally {
       await disconnect();
     }
