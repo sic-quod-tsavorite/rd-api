@@ -109,7 +109,7 @@ export async function deleteDuckById(req: Request, res: Response) {
     await disconnect();
   }
 }
-
+//sdfg
 /**
  * Retrieves a rubber duck with a query from the data source
  * @param req
