@@ -2,11 +2,11 @@ import { User } from "./user";
 
 export interface Duck extends Document {
   name: string;
-  aboutDuck: string;
+  description: string;
   imageURL: string;
-  netWorth: number;
-  isDank: boolean;
-  cutenessPct: number;
+  price: number;
+  onSale: boolean;
+  discountPct: number;
   isHidden: boolean;
   _createdBy: User["id"];
 }

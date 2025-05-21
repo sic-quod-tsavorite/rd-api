@@ -56,12 +56,12 @@ export async function fakeData() {
   for (let i = 0; i < 5; i++) {
     await new duckModel({
       name: faker.animal.petName(),
-      aboutDuck: faker.company.buzzPhrase(),
+      description: faker.company.buzzPhrase(),
       imageURL:
         "https://i.pinimg.com/736x/de/9a/11/de9a11ca199ebd5bb05f99ca5897dfaa.jpg",
-      netWorth: faker.commerce.price({ min: 5, max: 5000 }),
-      isDank: faker.datatype.boolean(0.5),
-      cutenessPct: faker.number.int({ min: 0, max: 100 }),
+      price: faker.commerce.price({ min: 5, max: 5000 }),
+      onSale: faker.datatype.boolean(0.5),
+      discountPct: faker.number.int({ min: 0, max: 100 }),
       isHidden: false,
       _createdBy: user3.id,
     }).save();

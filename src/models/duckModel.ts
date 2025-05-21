@@ -6,11 +6,11 @@ import { Duck } from "../interfaces/rubberDuck";
  */
 const duckSchema = new Schema<Duck>({
   name: { type: String, required: true, min: 10, max: 100 },
-  aboutDuck: { type: String, required: false, min: 10, max: 255 },
+  description: { type: String, required: false, min: 10, max: 255 },
   imageURL: { type: String, required: true },
-  netWorth: { type: Number, required: true },
-  isDank: { type: Boolean, required: true, default: false },
-  cutenessPct: { type: Number, required: false, default: 0, min: 0, max: 100 },
+  price: { type: Number, required: true },
+  onSale: { type: Boolean, required: true, default: false },
+  discountPct: { type: Number, required: false, default: 0, min: 0, max: 100 },
   isHidden: { type: Boolean, required: true, default: false },
   _createdBy: { type: String, ref: "User", required: true },
 });
