@@ -21,8 +21,10 @@
     "start-dev": "cross-env NODE_ENV=development npx nodemon",
     "test": "echo \"test\"",
     "lint": "npx eslint",
-    "seed": "npx ts-node ./src/util/dataSeeder.ts",
-    "fakeSeed": "npx ts-node ./src/util/fakeSeeder.ts"
+    "seed-local": "cross-env NODE_ENV=local npx ts-node ./src/util/dataSeeder.ts",
+    "seed-dev": "cross-env NODE_ENV=development npx ts-node ./src/util/dataSeeder.ts",
+    "fakeSeed-local": "cross-env NODE_ENV=local npx ts-node ./src/util/fakeSeeder.ts",
+    "fakeSeed-dev": "cross-env NODE_ENV=development npx ts-node ./src/util/fakeSeeder.ts"
   },
   "nodemonConfig": {
     "verbose": false,
