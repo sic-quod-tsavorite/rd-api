@@ -7,7 +7,7 @@ export async function testConnection() {
   try {
     await connect();
     await disconnect();
-    console.log("Database connection test successful");
+    //console.log("Database connection test successful");
   } catch (error) {
     console.log("Error testing connection to database: ", error);
   }
@@ -23,7 +23,7 @@ export async function connect() {
 
     if (mongoose.connection.db) {
       await mongoose.connection.db.admin().command({ ping: 1 });
-      console.log("Database connection successful");
+      //console.log("Database connection successful");
     } else {
       throw new Error("Database connection failed");
     }
@@ -36,7 +36,7 @@ export async function connect() {
 export async function disconnect() {
   try {
     await mongoose.disconnect();
-    console.log("Database disconnected");
+    //console.log("Database disconnected");
   } catch (error) {
     console.log("Error disconnecting from database: ", error);
   }
