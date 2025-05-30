@@ -3,6 +3,8 @@ process.env.NODE_ENV = "local";
 import { test } from "@playwright/test";
 import health from "./health.test";
 import userTestCollection from "./user.test";
+import getItemTest from "./getItems.test";
+import createItemTest from "./new-item.test";
 
 import { userModel } from "../src/models/userModel";
 import { duckModel } from "../src/models/duckModel";
@@ -18,7 +20,7 @@ function setup() {
     try {
       await connect();
       await userModel.deleteMany({});
-      await duckModel.deleteMany({});
+      //await duckModel.deleteMany({});
     } finally {
       await disconnect();
     }
@@ -35,7 +37,12 @@ function setup() {
   });
 }
 
-//setup();
+setup();
 
 test.describe(health);
 test.describe(userTestCollection);
+
+test.describe(getItemTest);
+
+/* Create item test, expect fail when token verification enabled in routes */
+test.describe(createItemTest);
