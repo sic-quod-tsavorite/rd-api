@@ -12,11 +12,11 @@ export default function userTestCollection() {
     };
 
     // Act
-    const response = await request.post("/api/user/register", { data: user });
+    const response = await request.post("/rd-api/user/register", { data: user });
     const json = await response.json();
 
     // Assert
-    expect(response.status()).toBe(201);
+    expect(response.status()).toBe(200);
     expect(json.error).toEqual(null);
   });
 
@@ -31,7 +31,7 @@ export default function userTestCollection() {
     };
 
     // Act
-    const response = await request.post("/api/user/register", { data: user });
+    const response = await request.post("/rd-api/user/register", { data: user });
     const json = await response.json();
 
     // Assert

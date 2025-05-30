@@ -29,7 +29,7 @@ const router: Router = Router();
  *        description: Server up and running.
  */
 router.get("/", (req: Request, res: Response) => {
-  res.status(200).send("Welcome to the RD-API");
+  res.status(200).send({ message: "Welcome to the RD-API" });
 });
 
 // Dev tool
@@ -199,7 +199,7 @@ router.get("/rubber-ducks/:id", getDucksById);
  *               items:
  *                 $ref: "#/components/schemas/Duck"
  */
-router.get("rubber-ducks/query/:key/:val", getDucksByQuery);
+router.get("/rubber-ducks/query/:key/:val", getDucksByQuery);
 
 //- update
 /**

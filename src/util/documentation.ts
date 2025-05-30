@@ -17,7 +17,7 @@ export function setupDocs(app: Application) {
     },
     servers: [
       {
-        url: "http://localhost:" + process.env.PORT || 4000 + "/rd-api/",
+        url: "http://localhost:" + (process.env.PORT || 4000) + "/rd-api/",
         description: "Local development server",
       },
     ],
